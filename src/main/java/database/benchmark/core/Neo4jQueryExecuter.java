@@ -1,4 +1,4 @@
-package cl.cam.ac.provenance;
+package database.benchmark.core;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

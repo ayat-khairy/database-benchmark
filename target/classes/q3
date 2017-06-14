@@ -1,3 +1,0 @@
-Match (e:SensorReading)-[R]-> (S:SensorReadingProvenance) where type(R)=~'has provenance.*' AND S.sensorType=~".*Sockets.*"  return S.readingsLocation, SUM( e.reading) as acc  order by   acc DESC limit 1
-Match (e:SensorReading)-[R]-> (S:SensorReadingProvenance) where type(R)=~'has provenance.*'  AND  S.sensorType=~".*ELec.*" AND e.timestamp IN RANGE (1480550400000,1483228740000)  return S.readingsLocation, sum(e.reading) as sumR  order by   sumR DESC
-Match (e:SensorReading)-[R]-> (S:SensorReadingProvenance) where type(R)=~'has provenance.*'  AND  S.sensorType=~".*ELec.*"  AND S.readingsLocation=~".*W.*" AND e.timestamp IN RANGE (1480550400000,1483228740000) return SUM( e.reading)
