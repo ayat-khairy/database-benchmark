@@ -1,0 +1,1 @@
+select count (*) as total from buspos ,  zone where zone.zone_name='trumpington_road' AND buspos.day  = 1 AND ST_Distance(position , zonepos)<2000  ;
